@@ -4,10 +4,12 @@ using UnityEngine;
 
 public class Button : MonoBehaviour
 {
+    [SerializeField] Machine machine;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        machine=transform.parent.GetComponent<Machine>();
     }
 
     // Update is called once per frame

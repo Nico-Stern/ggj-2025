@@ -19,6 +19,9 @@ public class ControllerPlayer : MonoBehaviour
     void Update()
     {
         Move();
+
+        //weg werfen
+        //maschine betätigen maybe?
     }
 
     void Move()
