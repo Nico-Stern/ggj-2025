@@ -20,7 +20,7 @@ public class Button : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
-
+            print("player in");
         }
     }
 
@@ -28,7 +28,7 @@ public class Button : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
-
+            print("player out");
         }
     }
 }

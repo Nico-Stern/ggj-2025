@@ -29,6 +29,14 @@ public enum Bubble
     Citrus
 }
 
+public enum Machine_Enum
+{
+    None,
+    Tea,
+    Syrup,
+    Bubble
+}
+
 public class Enums : MonoBehaviour
 {
     // Start is called before the first frame update
