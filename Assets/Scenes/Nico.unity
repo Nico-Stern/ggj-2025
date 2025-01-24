@@ -380,6 +380,10 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 281332651}
+    - target: {fileID: 7441006808946240109, guid: aaa248d89c7849848b3439d45c33707c, type: 3}
+      propertyPath: smoothSpeed
+      value: 0.01
+      objectReference: {fileID: 0}
     - target: {fileID: 8064182567088870645, guid: aaa248d89c7849848b3439d45c33707c, type: 3}
       propertyPath: m_Name
       value: Main Camera
