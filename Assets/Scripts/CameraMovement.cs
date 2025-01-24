@@ -8,6 +8,11 @@ public class CameraMovement: MonoBehaviour
     public Vector3 offset = new Vector3(0f, 5f, -10f); // Abstand zur Kamera
     public float smoothSpeed = 0.125f; // Glättungsfaktor für die Kamerabewegung
 
+    private void Start()
+    {
+        offset = transform.position;
+    }
+
     void LateUpdate()
     {
         if (player != null)
