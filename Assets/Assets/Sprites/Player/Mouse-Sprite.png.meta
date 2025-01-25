@@ -113,10 +113,10 @@ TextureImporter:
       name: Mouse-Sprite_0
       rect:
         serializedVersion: 2
-        x: 58
-        y: 87
-        width: 1121
-        height: 1036
+        x: 70
+        y: 0
+        width: 1137.2222
+        height: 1200
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -134,10 +134,10 @@ TextureImporter:
       name: Mouse-Sprite_1
       rect:
         serializedVersion: 2
-        x: 1189
-        y: 76
-        width: 16
-        height: 21
+        x: 1262
+        y: 0
+        width: 1137.2222
+        height: 1200
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -155,10 +155,10 @@ TextureImporter:
       name: Mouse-Sprite_2
       rect:
         serializedVersion: 2
-        x: 1258
-        y: 87
-        width: 1123
-        height: 1010
+        x: 2454
+        y: 0
+        width: 1137.2222
+        height: 1200
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -176,10 +176,10 @@ TextureImporter:
       name: Mouse-Sprite_3
       rect:
         serializedVersion: 2
-        x: 2392
-        y: 76
-        width: 15
-        height: 21
+        x: 3646
+        y: 0
+        width: 1137.2222
+        height: 1200
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -197,10 +197,10 @@ TextureImporter:
       name: Mouse-Sprite_4
       rect:
         serializedVersion: 2
-        x: 2460
-        y: 87
-        width: 1118
-        height: 1036
+        x: 4838
+        y: 0
+        width: 1137.2222
+        height: 1200
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -218,10 +218,10 @@ TextureImporter:
       name: Mouse-Sprite_5
       rect:
         serializedVersion: 2
-        x: 3589
-        y: 76
-        width: 15
-        height: 21
+        x: 6030
+        y: 0
+        width: 1137.2222
+        height: 1200
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -239,10 +239,10 @@ TextureImporter:
       name: Mouse-Sprite_6
       rect:
         serializedVersion: 2
-        x: 3789
-        y: 3
-        width: 997
-        height: 1194
+        x: 7222
+        y: 0
+        width: 1137.2222
+        height: 1200
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -260,10 +260,10 @@ TextureImporter:
       name: Mouse-Sprite_7
       rect:
         serializedVersion: 2
-        x: 4986
-        y: 3
-        width: 1002
-        height: 1168
+        x: 8414
+        y: 0
+        width: 1137.2222
+        height: 1200
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -281,10 +281,10 @@ TextureImporter:
       name: Mouse-Sprite_8
       rect:
         serializedVersion: 2
-        x: 6183
-        y: 66
-        width: 997
-        height: 1057
+        x: 9606
+        y: 0
+        width: 1137.2222
+        height: 1200
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -294,111 +294,6 @@ TextureImporter:
       bones: []
       spriteID: 00b8ed2f35d833d4ca25529c990eabec
       internalID: -1959218874
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Mouse-Sprite_9
-      rect:
-        serializedVersion: 2
-        x: 7190
-        y: 76
-        width: 16
-        height: 21
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 5954288ba3e8b494c8ecb04d4a85187e
-      internalID: 1681425635
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Mouse-Sprite_10
-      rect:
-        serializedVersion: 2
-        x: 7385
-        y: 66
-        width: 997
-        height: 1021
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 5b8bf83aed8b47e4ab7a6a7212b0098d
-      internalID: -718254236
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Mouse-Sprite_11
-      rect:
-        serializedVersion: 2
-        x: 8388
-        y: 76
-        width: 20
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ce4123818619ee442b286339ffbe4166
-      internalID: 1609958721
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Mouse-Sprite_12
-      rect:
-        serializedVersion: 2
-        x: 8588
-        y: 0
-        width: 996
-        height: 1200
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 38e34bdcc3746b8438e13f0996f965af
-      internalID: 1341238469
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Mouse-Sprite_13
-      rect:
-        serializedVersion: 2
-        x: 9786
-        y: 3
-        width: 1001
-        height: 1173
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 07d5e5cdcaa1ea145b6903534515702a
-      internalID: -1511330607
       vertices: []
       indices: 
       edges: []
@@ -416,10 +311,6 @@ TextureImporter:
     nameFileIdTable:
       Mouse-Sprite_0: 1399642615
       Mouse-Sprite_1: -465557789
-      Mouse-Sprite_10: -718254236
-      Mouse-Sprite_11: 1609958721
-      Mouse-Sprite_12: 1341238469
-      Mouse-Sprite_13: -1511330607
       Mouse-Sprite_2: 71925863
       Mouse-Sprite_3: -784143838
       Mouse-Sprite_4: 1208685832
@@ -427,7 +318,6 @@ TextureImporter:
       Mouse-Sprite_6: 299101191
       Mouse-Sprite_7: -154296712
       Mouse-Sprite_8: -1959218874
-      Mouse-Sprite_9: 1681425635
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
