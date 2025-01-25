@@ -18,15 +18,21 @@ public class Order
 
 public class OrderSystem : MonoBehaviour
 {
+    public UI_Coins UI;
+
     public List<Order> orders = new List<Order>();
     [SerializeField] int Max_Orders=3;
     [SerializeField] float NextOrderInSec = 2f;
-    [SerializeField] float CurrentOrderTimer;
+    float CurrentOrderTimer;
+
+    [SerializeField] int CurrentCoins = 0;
 
     // Start is called before the first frame update
     void Start()
     {
-        newOrder();
+        
+        UI = GetComponent<UI_Coins>();
+        UI.Set_TbxCoins(CurrentCoins);
     }
 
     // Update is called once per frame
@@ -50,14 +56,19 @@ public class OrderSystem : MonoBehaviour
             int rdm_Tea = UnityEngine.Random.Range(1, System.Enum.GetValues(typeof(Tea)).Length); // 0 bis Anzahl der Tees
             int rdm_Syrup = UnityEngine.Random.Range(1, System.Enum.GetValues(typeof(Syrup)).Length); // 0 bis Anzahl der Sirups
             int rdm_Bubble = UnityEngine.Random.Range(1, System.Enum.GetValues(typeof(Bubble)).Length); 
+            int rdm_Coins = UnityEngine.Random.Range(1, 6); 
 
             // Enum-Zuweisung basierend auf dem Index
             Index_Order.tea = (Tea)rdm_Tea;
             Index_Order.syrup = (Syrup)rdm_Syrup;
-            Index_Order.bubble = (Bubble)rdm_Syrup;
+            Index_Order.bubble = (Bubble)rdm_Bubble;
+
+            Index_Order.Price = rdm_Coins;
 
             // Füge den neuen Auftrag der Liste hinzu
             orders.Add(Index_Order);
+
+            UI.SetOrderUI(orders.Count-1, rdm_Tea, rdm_Syrup, rdm_Bubble);
         }
 
     }
@@ -74,7 +85,14 @@ public class OrderSystem : MonoBehaviour
                 {
                     Destroy(Cup.gameObject);
 
+                    CurrentCoins+= orders[i].Price;
+                    UI.Set_TbxCoins(CurrentCoins);
+
                     orders.RemoveAt(i);
+
+                    other.gameObject.GetComponent<ControllerPlayer>().HasPlayerTheCup(false);
+
+                    UI.OrderFinished(i);
 
                     break;
                 }

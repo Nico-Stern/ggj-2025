@@ -11,13 +11,27 @@ public class ControllerPlayer : MonoBehaviour
     private float groundCheckRadius = 0.2f;
     public LayerMask groundLayer; // Schicht für den Boden
 
+    Animator animator;
+
+    [SerializeField] float delay = .3f;
+    [SerializeField] float currentDelay;
+
+    bool IsTimerRunnig;
+
     void Start()
     {
         rb = GetComponent<Rigidbody>();
+        animator = GetComponent<Animator>();
+    }
+
+    public void HasPlayerTheCup(bool hasCup)
+    {
+        animator.SetBool("CupGrabbed", hasCup);
     }
 
     void Update()
     {
+
         Move();
 
         //weg werfen
@@ -31,10 +45,24 @@ public class ControllerPlayer : MonoBehaviour
 
                 Index.transform.SetParent(null);
 
-                Index.GetComponent<Rigidbody>().AddForce(100,300,10);
+                Index.GetComponent<Rigidbody>().AddForce(100,300,10);               
+
+                animator.SetTrigger("CupThrow");
+                currentDelay = 0;
+                IsTimerRunnig = true;
+            }
+        }
+        else
+        {
+            if (currentDelay > delay && IsTimerRunnig)
+            {
+               
+                HasPlayerTheCup(false);
+                IsTimerRunnig = false;
             }
         }
         //maschine betätigen maybe?
+        currentDelay += Time.deltaTime;
     }
 
     void Move()
@@ -54,6 +82,8 @@ public class ControllerPlayer : MonoBehaviour
 
         // Bewege den Spieler
         rb.velocity = new Vector3(moveDirection.x * moveSpeed, rb.velocity.y, moveDirection.z * moveSpeed);
+
+        animator.SetFloat("Velocity", rb.velocity.x);
     }
 
 }
