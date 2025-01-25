@@ -124,7 +124,7 @@ MonoBehaviour:
   tea: 0
   syrup: 0
   bubble: 0
-  FillSpeed: 5
+  FillSpeed: 20
 --- !u!1 &9144536800557436985
 GameObject:
   m_ObjectHideFlags: 0

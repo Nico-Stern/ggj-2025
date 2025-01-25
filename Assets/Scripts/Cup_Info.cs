@@ -4,14 +4,35 @@ using UnityEngine;
 
 public class Cup_Info : MonoBehaviour
 {
+    [Header("Tea things")]
+    
     public Tea tea_e;
     public float tea_Fill=0;
+    [SerializeField] Material fill0;
+    [SerializeField] Material fill1;
+    [SerializeField] Material fill2;
+    [SerializeField] Material fill3;
+    [SerializeField] Material fill4;
 
+    [Header("Syrup things")]
     public Syrup syrup_e;
     public float syrup_Fill = 0;
+    [SerializeField] Material Sfill0;
+    [SerializeField] Material Sfill1;
+    [SerializeField] Material Sfill2;
+    [SerializeField] Material Sfill3;
+    [SerializeField] Material Sfill4;
+    [SerializeField] GameObject SyrupHolder;
 
+    [Header("Bubble things")]
     public Bubble bubble_e;
-    public float buuble_Fill = 0;
+    public float bubble_Fill = 0;
+    [SerializeField] Material Bfill0;
+    [SerializeField] Material Bfill1;
+    [SerializeField] Material Bfill2;
+    [SerializeField] Material Bfill3;
+    [SerializeField] Material Bfill4;
+    [SerializeField] GameObject BubbleHolder;
 
     // Start is called before the first frame update
     void Start()
@@ -47,6 +68,31 @@ public class Cup_Info : MonoBehaviour
                 tea_Fill += fill;
             }
         }
+
+        if(tea_Fill > 0)
+        {
+            
+        }
+        if (tea_Fill > 20)
+        {
+            SyrupHolder.GetComponent<Renderer>().material = fill0;
+        }
+        if (tea_Fill > 40)
+        {
+            SyrupHolder.GetComponent<Renderer>().material = fill1;
+        }
+        if (tea_Fill > 60)
+        {
+            SyrupHolder.GetComponent<Renderer>().material = fill2;
+        }
+        if (tea_Fill > 80)
+        {
+            SyrupHolder.GetComponent<Renderer>().material = fill3;
+        }
+        if (tea_Fill > 100)
+        {
+            SyrupHolder.GetComponent<Renderer>().material = fill4;
+        }
     }
 
     public void FillSyrup(Syrup Machine_syrup, float fill)
@@ -61,6 +107,31 @@ public class Cup_Info : MonoBehaviour
             {
                 syrup_Fill += fill;
             }
+
+            if (syrup_Fill > 0)
+            {
+
+            }
+            if (syrup_Fill > 20)
+            {
+                GetComponent<Renderer>().material = Sfill0;
+            }
+            if (syrup_Fill > 40)
+            {
+                GetComponent<Renderer>().material = Sfill1;
+            }
+            if (syrup_Fill > 60)
+            {
+                GetComponent<Renderer>().material = Sfill2;
+            }
+            if (syrup_Fill > 80)
+            {
+                GetComponent<Renderer>().material = Sfill3;
+            }
+            if (syrup_Fill > 100)
+            {
+                GetComponent<Renderer>().material = Sfill4;
+            }
         }
     }
 
@@ -74,7 +145,32 @@ public class Cup_Info : MonoBehaviour
         {
             if (bubble_e == Machine_bubble)
             {
-                buuble_Fill += fill;
+                bubble_Fill += fill;
+            }
+
+            if (bubble_Fill > 0)
+            {
+
+            }
+            if (bubble_Fill > 20)
+            {
+                BubbleHolder.GetComponent<Renderer>().material = Bfill0;
+            }
+            if (bubble_Fill > 40)
+            {
+                BubbleHolder.GetComponent<Renderer>().material = Bfill1;
+            }
+            if (bubble_Fill > 60)
+            {
+                BubbleHolder.GetComponent<Renderer>().material = Bfill2;
+            }
+            if (bubble_Fill > 80)
+            {
+                BubbleHolder.GetComponent<Renderer>().material = Bfill3;
+            }
+            if (bubble_Fill > 100)
+            {
+                BubbleHolder.GetComponent<Renderer>().material = Bfill4;
             }
         }
     }
