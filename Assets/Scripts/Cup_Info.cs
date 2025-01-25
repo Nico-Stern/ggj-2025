@@ -46,12 +46,14 @@ public class Cup_Info : MonoBehaviour
         
     }
 
-    private void OnTriggerEnter(Collider other)
+    private void OnCollisionEnter(Collision collision)
     {
-        if (other.gameObject.CompareTag("Player"))
+        if (collision.gameObject.CompareTag("Player"))
         {
             print("a");
-            transform.SetParent(other.transform);
+            transform.SetParent(collision.transform);
+            GetComponent<Rigidbody>().isKinematic = true;
+            GetComponent<Collider>().isTrigger = true;
         }
     }
 
