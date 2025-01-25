@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.Build.Player;
 using UnityEngine;
 
 public class Machine : MonoBehaviour
@@ -7,24 +8,79 @@ public class Machine : MonoBehaviour
 
     [SerializeField] Machine_Enum machine_Type;
 
+    [SerializeField] Tea tea;
+    [SerializeField] Syrup syrup;
+    [SerializeField] Bubble bubble;
+    GameObject Player_Object;
+
+    [SerializeField] float FillSpeed = 5f;
+    bool isfilling;
+
+    
+
     // Start is called before the first frame update
     void Start()
     {
+        Player_Object = FindObjectOfType<ControllerPlayer>().gameObject;
+
         if(machine_Type == Machine_Enum.None)
         {
             print(gameObject.name + "not set");
         }
+
+        switch(machine_Type)
+        {
+            case Machine_Enum.None:
+                print(gameObject.name + " need a fill enum");
+                break;
+
+            case Machine_Enum.Tea:
+                syrup = Syrup.none;
+                bubble = Bubble.none;
+                break;
+
+            case Machine_Enum.Syrup:
+                tea = Tea.none;
+                bubble = Bubble.none;
+                break;
+
+            case Machine_Enum.Bubble:
+                syrup = Syrup.none;
+                tea = Tea.none;
+                break;
+        }
     }
 
-    public void FillCup(bool isFilling)
+    private void Update()
     {
-        if(isFilling)
+        if (isfilling)
         {
 
+            float speed = Time.deltaTime * FillSpeed;
+
+            if (Player_Object.transform.childCount != 0)
+            {
+                //play animation
+                switch (machine_Type)
+                {
+                    case Machine_Enum.None:
+                        break;
+                    case Machine_Enum.Tea:
+                        Player_Object.GetComponentInChildren<Cup_Info>().FillTea(tea,speed);
+                        break;
+                    case Machine_Enum.Syrup:
+                        Player_Object.GetComponentInChildren<Cup_Info>().FillSyrup(syrup, speed);
+                        break;
+                    case Machine_Enum.Bubble:
+                        Player_Object.GetComponentInChildren<Cup_Info>().FillBubble(bubble, speed);
+                        break;
+                }
+            }
         }
-        else
-        {
-            
-        }
+    }
+
+    public void FillCup(bool hasToFill)
+    {
+        isfilling = hasToFill;
     }
 }

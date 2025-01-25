@@ -23,6 +23,7 @@ public class Button : MonoBehaviour
         if (other.gameObject.CompareTag("Player"))
         {
             print("player in");
+            machine.FillCup(true);
         }
     }
 
@@ -31,6 +32,7 @@ public class Button : MonoBehaviour
         if (other.gameObject.CompareTag("Player"))
         {
             print("player out");
+            machine.FillCup(false);
         }
     }
 }

@@ -21,6 +21,13 @@ public class ControllerPlayer : MonoBehaviour
         Move();
 
         //weg werfen
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            if(transform.childCount != 0)
+            {
+                transform.GetChild(0).gameObject.transform.SetParent(null);
+            }
+        }
         //maschine betätigen maybe?
     }
 
