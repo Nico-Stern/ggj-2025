@@ -25,7 +25,13 @@ public class ControllerPlayer : MonoBehaviour
         {
             if(transform.childCount != 0)
             {
-                transform.GetChild(0).gameObject.transform.SetParent(null);
+                GameObject Index = transform.GetChild(0).gameObject;
+
+                Index.GetComponent<Rigidbody>().isKinematic = false;
+
+                Index.transform.SetParent(null);
+
+                Index.GetComponent<Rigidbody>().AddForce(100,300,10);
             }
         }
         //maschine betätigen maybe?
