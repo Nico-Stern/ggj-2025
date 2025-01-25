@@ -16,7 +16,13 @@ public class Machine : MonoBehaviour
     [SerializeField] float FillSpeed = 5f;
     bool isfilling;
 
-    
+    [SerializeField] Sprite Tea_Sprite;
+    [SerializeField] Sprite Syrup_Sprite;
+    [SerializeField] Sprite Bubble_Sprite;
+
+    [SerializeField] Color[] ColorOfImage;
+
+    [SerializeField] SpriteRenderer sr;
 
     // Start is called before the first frame update
     void Start()
@@ -37,16 +43,25 @@ public class Machine : MonoBehaviour
             case Machine_Enum.Tea:
                 syrup = Syrup.none;
                 bubble = Bubble.none;
+                sr.sprite = Tea_Sprite;
+
+                sr.color=ColorOfImage[((int)tea)-1] ;
                 break;
 
             case Machine_Enum.Syrup:
                 tea = Tea.none;
                 bubble = Bubble.none;
+                sr.sprite = Syrup_Sprite;
+
+                sr.color = ColorOfImage[((int)syrup)-1];//
                 break;
 
             case Machine_Enum.Bubble:
                 syrup = Syrup.none;
                 tea = Tea.none;
+                sr.sprite = Bubble_Sprite;
+
+                sr.color = ColorOfImage[((int)bubble)-1];
                 break;
         }
     }
@@ -67,12 +82,15 @@ public class Machine : MonoBehaviour
                         break;
                     case Machine_Enum.Tea:
                         Player_Object.GetComponentInChildren<Cup_Info>().FillTea(tea,speed);
+                        
                         break;
                     case Machine_Enum.Syrup:
                         Player_Object.GetComponentInChildren<Cup_Info>().FillSyrup(syrup, speed);
+                        
                         break;
                     case Machine_Enum.Bubble:
                         Player_Object.GetComponentInChildren<Cup_Info>().FillBubble(bubble, speed);
+                        
                         break;
                 }
             }

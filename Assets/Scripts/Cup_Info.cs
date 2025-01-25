@@ -54,6 +54,8 @@ public class Cup_Info : MonoBehaviour
             transform.SetParent(collision.transform);
             GetComponent<Rigidbody>().isKinematic = true;
             GetComponent<Collider>().isTrigger = true;
+
+            collision.gameObject.GetComponent<ControllerPlayer>().HasPlayerTheCup(true);
         }
     }
 
