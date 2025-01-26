@@ -133,18 +133,18 @@ public class Cup_Info : MonoBehaviour
         {
 
             case Tea.Peach:
-                TeaHolder.GetComponent<Image>().color = new Color32(0,0,0,0);
+                TeaHolder.GetComponent<Image>().color = peach;
                 break;
             case Tea.Matcha:
-                TeaHolder.GetComponent<Image>().color = new Color32(0, 0, 0, 0);
+                TeaHolder.GetComponent<Image>().color = matcha;
                 break;
 
             case Tea.Thai:
-                TeaHolder.GetComponent<Image>().color = new Color32(0, 0, 0, 0);
+                TeaHolder.GetComponent<Image>().color = thai;
                 break;
 
             case Tea.Oolong:
-                TeaHolder.GetComponent<Image>().color = new Color32(0, 0, 0, 0);
+                TeaHolder.GetComponent<Image>().color = oolong;
                 break;
 
 
@@ -193,11 +193,11 @@ public class Cup_Info : MonoBehaviour
         switch (syrup_e)
         {
             case Syrup.Chocolate:
-                SyrupHolder.GetComponent<Image>().color = new Color32(0, 0, 0, 0);
+                SyrupHolder.GetComponent<Image>().color = choco;
                 break;
 
             case Syrup.Brown_Sugar:
-                SyrupHolder.GetComponent<Image>().color = new Color32(0, 0, 0, 0);
+                SyrupHolder.GetComponent<Image>().color = sugar;
                 break;
 
             
@@ -248,22 +248,22 @@ public class Cup_Info : MonoBehaviour
         {
             case Bubble.Strawberry:
 
-                BubbleHolder.GetComponent<Image>().color = new Color32(0, 0, 0, 0);
+                BubbleHolder.GetComponent<Image>().color = straw;
                 break;
 
             case Bubble.Blueberry:
 
-                BubbleHolder.GetComponent<Image>().color = new Color32(0, 0, 0, 0);
+                BubbleHolder.GetComponent<Image>().color = blue;
                 break;
 
             case Bubble.Tapioca_Pearls:
 
-                BubbleHolder.GetComponent<Image>().color = new Color32(0, 0, 0, 0);
+                BubbleHolder.GetComponent<Image>().color = tapi;
                 break;
 
             case Bubble.Aloe_Vera:
 
-                BubbleHolder.GetComponent<Image>().color = new Color32(0, 0, 0, 0);
+                BubbleHolder.GetComponent<Image>().color = aloe;
                 break;
 
         }

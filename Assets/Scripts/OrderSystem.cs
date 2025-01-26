@@ -19,6 +19,11 @@ public class Order
 
 public class OrderSystem : MonoBehaviour
 {
+    [Header("Timer")]
+
+    [SerializeField] float GameTimer;
+
+    [Header("Rest")]
     public UI_Coins UI;
 
     public List<Order> orders = new List<Order>();
