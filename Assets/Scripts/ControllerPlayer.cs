@@ -82,7 +82,16 @@ public class ControllerPlayer : MonoBehaviour
 
                 Index.localPosition = new Vector3(transform.position.x, 4, transform.position.z);
 
-                Index.GetComponent<Rigidbody>().AddForce(rb.velocity*120f+ new Vector3( 0, 300, 0));
+                if((rb.velocity.z * 120f >0))
+                {
+                    Index.GetComponent<Rigidbody>().AddForce((new Vector3(rb.velocity.x, rb.velocity.y, 0) * 120f + new Vector3(0, 300, 0)));
+                }
+                else
+                {
+                    Index.GetComponent<Rigidbody>().AddForce((rb.velocity * 120f + new Vector3(0, 300, 0)));
+                }
+
+                
 
 
                 PlayerHasCup(false);

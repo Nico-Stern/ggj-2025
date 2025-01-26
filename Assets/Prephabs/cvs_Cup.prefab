@@ -65,7 +65,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10911, guid: 0000000000000000f000000000000000, type: 0}
+  m_Sprite: {fileID: 10917, guid: 0000000000000000f000000000000000, type: 0}
   m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -140,8 +140,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: c60ef66f9d240f043b58525fafa85bb2, type: 3}
-  m_Type: 0
+  m_Sprite: {fileID: 10917, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -191,7 +191,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 0, y: 10.86}
+  m_AnchoredPosition: {x: 0, y: 10.859985}
   m_SizeDelta: {x: 10, y: 10}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!223 &832063056048583694
@@ -239,7 +239,7 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
-  m_PresetInfoIsWorld: 1
+  m_PresetInfoIsWorld: 0
 --- !u!114 &5910506285262141548
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -298,27 +298,28 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tea_e: 0
   tea_Fill: 0
-  fill0: {fileID: 0}
+  fill0: {fileID: 10911, guid: 0000000000000000f000000000000000, type: 0}
   fill1: {fileID: 0}
   fill2: {fileID: 0}
   fill3: {fileID: 0}
   fill4: {fileID: 0}
+  TeaHolder: {fileID: 1066348642338547939}
   syrup_e: 0
   syrup_Fill: 0
-  Sfill0: {fileID: 0}
+  Sfill0: {fileID: 21300000, guid: 73190e7c063940344a62a680d7eb518c, type: 3}
   Sfill1: {fileID: 0}
   Sfill2: {fileID: 0}
   Sfill3: {fileID: 0}
   Sfill4: {fileID: 0}
-  SyrupHolder: {fileID: 0}
+  SyrupHolder: {fileID: 7465719711416676291}
   bubble_e: 0
   bubble_Fill: 0
-  Bfill0: {fileID: 0}
+  Bfill0: {fileID: 21300000, guid: e2ba7afccda3bd3419292dfff9795663, type: 3}
   Bfill1: {fileID: 0}
   Bfill2: {fileID: 0}
   Bfill3: {fileID: 0}
   Bfill4: {fileID: 0}
-  BubbleHolder: {fileID: 0}
+  BubbleHolder: {fileID: 8404589316168952677}
   isCupThrow: 0
   DeleteTimer: 1
 --- !u!1 &7882908055021876404
@@ -461,8 +462,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10901, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 0
+  m_Sprite: {fileID: 10917, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4

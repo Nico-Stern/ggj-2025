@@ -62,7 +62,7 @@ public class UI_Coins : MonoBehaviour
         Orders[OrderShield].transform.GetChild(0).GetComponent<Image>().color = ColorOfSprite[Bubble_Index - 1];
         Orders[OrderShield].gameObject.active = true;
 
-        CoinText[OrderShield].text = OrderShield.ToString();
+       
     }
 
     public void OrderFinished(int Index)

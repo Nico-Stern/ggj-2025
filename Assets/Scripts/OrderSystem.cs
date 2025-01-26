@@ -14,7 +14,7 @@ public class Order
     [SerializeField] public Bubble bubble;
     [SerializeField] public float Time;
     [SerializeField] public int Price;
-    [SerializeField] public int OrderShield;
+    [SerializeField] public int OrderShield=-1;
 }
 
 public class OrderSystem : MonoBehaviour
@@ -98,20 +98,29 @@ public class OrderSystem : MonoBehaviour
             indexes.Add(1);
             indexes.Add(2);
 
+            // Füge den neuen Auftrag der Liste hinzu
+            orders.Add(Index_Order);
+
             for (int i = 0; i < 3; i++)
             {
-                if (orders[i].OrderShield==0 || orders[i].OrderShield == 1 || orders[i].OrderShield == 2)
+                print("in " + i);
+
+                if (orders[i].OrderShield == 0 || orders[i].OrderShield == 1 || orders[i].OrderShield == 2)
                 {
-                    indexes.Remove(i);
+                    indexes.Remove(orders[i].OrderShield);
+                    print("remove " + orders[i].OrderShield);
                     
+                }
+                else
+                {
                     break;
                 }
             }
 
-            
 
-            // Füge den neuen Auftrag der Liste hinzu
-            orders.Add(Index_Order);
+            Index_Order.OrderShield = indexes[0];
+
+
 
             UI.SetOrderUI(orders.Count-1, rdm_Tea, rdm_Syrup, rdm_Bubble, indexes[0]);
 

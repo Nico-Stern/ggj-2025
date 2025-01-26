@@ -100,5 +100,6 @@ public class Machine : MonoBehaviour
     public void FillCup(bool hasToFill)
     {
         isfilling = hasToFill;
+        print("boba filling");
     }
 }

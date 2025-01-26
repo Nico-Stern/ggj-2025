@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Cup_Info : MonoBehaviour
 {
@@ -8,30 +9,31 @@ public class Cup_Info : MonoBehaviour
     
     public Tea tea_e;
     public float tea_Fill=0;
-    [SerializeField] Material fill0;
-    [SerializeField] Material fill1;
-    [SerializeField] Material fill2;
-    [SerializeField] Material fill3;
-    [SerializeField] Material fill4;
+    [SerializeField] Sprite fill0;
+    [SerializeField] Sprite fill1;
+    [SerializeField] Sprite fill2;
+    [SerializeField] Sprite fill3;
+    [SerializeField] Sprite fill4;
+    [SerializeField] GameObject TeaHolder;
 
     [Header("Syrup things")]
     public Syrup syrup_e;
     public float syrup_Fill = 0;
-    [SerializeField] Material Sfill0;
-    [SerializeField] Material Sfill1;
-    [SerializeField] Material Sfill2;
-    [SerializeField] Material Sfill3;
-    [SerializeField] Material Sfill4;
+    [SerializeField] Sprite Sfill0;
+    [SerializeField] Sprite Sfill1;
+    [SerializeField] Sprite Sfill2;
+    [SerializeField] Sprite Sfill3;
+    [SerializeField] Sprite Sfill4;
     [SerializeField] GameObject SyrupHolder;
 
     [Header("Bubble things")]
     public Bubble bubble_e;
     public float bubble_Fill = 0;
-    [SerializeField] Material Bfill0;
-    [SerializeField] Material Bfill1;
-    [SerializeField] Material Bfill2;
-    [SerializeField] Material Bfill3;
-    [SerializeField] Material Bfill4;
+    [SerializeField] Sprite Bfill0;
+    [SerializeField] Sprite Bfill1;
+    [SerializeField] Sprite Bfill2;
+    [SerializeField] Sprite Bfill3;
+    [SerializeField] Sprite Bfill4;
     [SerializeField] GameObject BubbleHolder;
 
     public bool isCupThrow;
@@ -95,23 +97,23 @@ public class Cup_Info : MonoBehaviour
         }
         if (tea_Fill > 20)
         {
-            SyrupHolder.GetComponent<Renderer>().material = fill0;
+            TeaHolder.GetComponent<Image>().sprite = fill0;
         }
         if (tea_Fill > 40)
         {
-            SyrupHolder.GetComponent<Renderer>().material = fill1;
+            TeaHolder.GetComponent<Image>().sprite = fill1;
         }
         if (tea_Fill > 60)
         {
-            SyrupHolder.GetComponent<Renderer>().material = fill2;
+            TeaHolder.GetComponent<Image>().sprite = fill2;
         }
         if (tea_Fill > 80)
         {
-            SyrupHolder.GetComponent<Renderer>().material = fill3;
+            TeaHolder.GetComponent<Image>().sprite = fill3;
         }
         if (tea_Fill > 100)
         {
-            SyrupHolder.GetComponent<Renderer>().material = fill4;
+            TeaHolder.GetComponent<Image>().sprite = fill4;
         }
     }
 
@@ -134,23 +136,23 @@ public class Cup_Info : MonoBehaviour
             }
             if (syrup_Fill > 20)
             {
-                GetComponent<Renderer>().material = Sfill0;
+                SyrupHolder.GetComponent<Image>().sprite = Sfill0;
             }
             if (syrup_Fill > 40)
             {
-                GetComponent<Renderer>().material = Sfill1;
+                SyrupHolder.GetComponent<Image>().sprite = Sfill1;
             }
             if (syrup_Fill > 60)
             {
-                GetComponent<Renderer>().material = Sfill2;
+                SyrupHolder.GetComponent<Image>().sprite = Sfill2;
             }
             if (syrup_Fill > 80)
             {
-                GetComponent<Renderer>().material = Sfill3;
+                SyrupHolder.GetComponent<Image>().sprite = Sfill3;
             }
             if (syrup_Fill > 100)
             {
-                GetComponent<Renderer>().material = Sfill4;
+                SyrupHolder.GetComponent<Image>().sprite = Sfill4;
             }
         }
     }
@@ -174,23 +176,23 @@ public class Cup_Info : MonoBehaviour
             }
             if (bubble_Fill > 20)
             {
-                BubbleHolder.GetComponent<Renderer>().material = Bfill0;
+                BubbleHolder.GetComponent<Image>().sprite = Bfill0;
             }
             if (bubble_Fill > 40)
             {
-                BubbleHolder.GetComponent<Renderer>().material = Bfill1;
+                BubbleHolder.GetComponent<Image>().sprite = Bfill1;
             }
             if (bubble_Fill > 60)
             {
-                BubbleHolder.GetComponent<Renderer>().material = Bfill2;
+                BubbleHolder.GetComponent<Image>().sprite = Bfill2;
             }
             if (bubble_Fill > 80)
             {
-                BubbleHolder.GetComponent<Renderer>().material = Bfill3;
+                BubbleHolder.GetComponent<Image>().sprite = Bfill3;
             }
             if (bubble_Fill > 100)
             {
-                BubbleHolder.GetComponent<Renderer>().material = Bfill4;
+                BubbleHolder.GetComponent<Image>().sprite = Bfill4;
             }
         }
     }
