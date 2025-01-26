@@ -140,18 +140,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CoinsText: {fileID: 0}
   teaS:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 21300000, guid: deb784ca5783f5649b6cc7f71ded882f, type: 3}
+  - {fileID: 21300000, guid: 7d8f3b7bcff526a42a56b8c2f4a3e07e, type: 3}
+  - {fileID: 21300000, guid: fceafde0209b8684284ca06defb5b75a, type: 3}
+  - {fileID: 21300000, guid: 2df6e7de5f5204e4bb51ed60a188e9f2, type: 3}
   SyrupS:
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 21300000, guid: 00a3a2f5bc82860489dc56a728c32575, type: 3}
+  - {fileID: 21300000, guid: 44080764718f21744852126c1c743ca7, type: 3}
   BobaS:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 21300000, guid: 77fcdb60b729edd4e99b9b380e1a900c, type: 3}
+  - {fileID: 21300000, guid: 53eb4f3130919b047b6cc8a3b1663bfb, type: 3}
+  - {fileID: 21300000, guid: 7b46cf3aeaa26df4ea6dd4f732ba6f6e, type: 3}
+  - {fileID: 21300000, guid: 6fb063241a9d354469df4f54165afff2, type: 3}
   Orders:
   - {fileID: 0}
   - {fileID: 0}
