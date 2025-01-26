@@ -11,4 +11,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Frank01.unity
     guid: 3ecf4d6a635acda4bbd092a2648e17ea
+  - enabled: 1
+    path: Assets/Scenes/00_Level.unity
+    guid: 2c2c1490664f3b14eb4499d122bf6abe
   m_configObjects: {}

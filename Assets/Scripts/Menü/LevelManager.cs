@@ -1,26 +1,25 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class LevelManager : MonoBehaviour
 {
-    public string sceneName;
-
-    // Start is called before the first frame update
-    void Start()
+    // Funktion zum Laden eines Levels
+    public void LoadLevel(string levelName)
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
-    public void changeScene()
-    {
-        SceneManager.LoadScene(sceneName);
+        if (string.IsNullOrEmpty(levelName))
+        {
+            Debug.LogError("Levelname ist leer oder null!");
+            return;
+        }
+       
+        // Überprüfen, ob die Szene existiert
+        if (Application.CanStreamedLevelBeLoaded(levelName))
+        {
+            LoadLevel(levelName);
+        }
+        else
+        {
+            Debug.LogError($"Die Szene '{levelName}' existiert nicht oder ist nicht im Build enthalten.");
+        }
     }
 }

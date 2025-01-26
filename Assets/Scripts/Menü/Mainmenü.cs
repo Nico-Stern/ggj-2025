@@ -11,7 +11,7 @@ public class Mainmenü: MonoBehaviour
     public void StartNew()
     {
         //New Scene - Spiel starten
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene(2);
     }
 
 }
