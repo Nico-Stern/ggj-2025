@@ -5,16 +5,16 @@ using UnityEngine;
 public enum Tea
 {
     none,
-    Black,
-    Green,
+    Thai,
+    Matcha,
     Oolong,
-    Jasmine
+    Peach
 }
 
 public enum Syrup
 {
     none,
-    Taro,
+    Chocolate,
     Mango,
     Lychee,
     Brown_Sugar
@@ -25,8 +25,8 @@ public enum Bubble
     none,
     Tapioca_Pearls,
     Blueberry,
-    Cherry,
-    Citrus
+    Aloe_Vera,
+    Strawberry
 }
 
 public enum Machine_Enum
