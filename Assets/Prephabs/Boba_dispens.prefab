@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 1464631726266072852}
   - component: {fileID: 5851186069358834470}
   - component: {fileID: 832420826263984033}
+  - component: {fileID: 3751806581279852452}
   m_Layer: 0
   m_Name: Button
   m_TagString: Untagged
@@ -106,6 +107,19 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 0.2}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &3751806581279852452
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4354132008799717205}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 32a6bd4f94959084c829187950a152f0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  machine: {fileID: 8782890119455620569}
 --- !u!1 &7897207166661756301
 GameObject:
   m_ObjectHideFlags: 0
@@ -162,7 +176,7 @@ MonoBehaviour:
   Syrup_Sprite: {fileID: 0}
   Bubble_Sprite: {fileID: 0}
   ColorOfImage: []
-  sr: {fileID: 0}
+  sr: {fileID: 5085996468615002088}
 --- !u!1 &9154027953306815071
 GameObject:
   m_ObjectHideFlags: 0
