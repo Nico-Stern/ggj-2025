@@ -29,7 +29,7 @@ public class CameraMovement: MonoBehaviour
             // Optional: Kamera auf den Spieler ausrichten
             transform.LookAt(player);
 
-            transform.position = new Vector3(transform.position.x,transform.position.y, 4.578719f);
+            transform.position = new Vector3(transform.position.x,transform.position.y, -4.578719f);
         }
     }
 }
