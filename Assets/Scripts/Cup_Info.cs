@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.ShaderGraph;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -38,6 +39,18 @@ public class Cup_Info : MonoBehaviour
 
     public bool isCupThrow;
     [SerializeField] float DeleteTimer = 1f;
+
+    public Color thai;
+    public Color matcha;
+    public Color oolong;
+    public Color peach;
+    public Color choco;
+    public Color sugar;
+    public Color tapi;
+    public Color blue;
+    public Color aloe;
+    public Color straw;
+
 
     // Start is called before the first frame update
     void Start()
@@ -115,6 +128,27 @@ public class Cup_Info : MonoBehaviour
         {
             TeaHolder.GetComponent<Image>().sprite = fill4;
         }
+
+        switch(tea_e)
+        {
+
+            case Tea.Peach:
+                TeaHolder.GetComponent<Image>().color = new Color32(0,0,0,0);
+                break;
+            case Tea.Matcha:
+                TeaHolder.GetComponent<Image>().color = new Color32(0, 0, 0, 0);
+                break;
+
+            case Tea.Thai:
+                TeaHolder.GetComponent<Image>().color = new Color32(0, 0, 0, 0);
+                break;
+
+            case Tea.Oolong:
+                TeaHolder.GetComponent<Image>().color = new Color32(0, 0, 0, 0);
+                break;
+
+
+        }
     }
 
     public void FillSyrup(Syrup Machine_syrup, float fill)
@@ -155,6 +189,20 @@ public class Cup_Info : MonoBehaviour
                 SyrupHolder.GetComponent<Image>().sprite = Sfill4;
             }
         }
+
+        switch (syrup_e)
+        {
+            case Syrup.Chocolate:
+                SyrupHolder.GetComponent<Image>().color = new Color32(0, 0, 0, 0);
+                break;
+
+            case Syrup.Brown_Sugar:
+                SyrupHolder.GetComponent<Image>().color = new Color32(0, 0, 0, 0);
+                break;
+
+            
+
+        }
     }
 
     public void FillBubble(Bubble Machine_bubble, float fill)
@@ -194,6 +242,30 @@ public class Cup_Info : MonoBehaviour
             {
                 BubbleHolder.GetComponent<Image>().sprite = Bfill4;
             }
+        }
+
+        switch(bubble_e)
+        {
+            case Bubble.Strawberry:
+
+                BubbleHolder.GetComponent<Image>().color = new Color32(0, 0, 0, 0);
+                break;
+
+            case Bubble.Blueberry:
+
+                BubbleHolder.GetComponent<Image>().color = new Color32(0, 0, 0, 0);
+                break;
+
+            case Bubble.Tapioca_Pearls:
+
+                BubbleHolder.GetComponent<Image>().color = new Color32(0, 0, 0, 0);
+                break;
+
+            case Bubble.Aloe_Vera:
+
+                BubbleHolder.GetComponent<Image>().color = new Color32(0, 0, 0, 0);
+                break;
+
         }
     }
 }

@@ -58,7 +58,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.9019608}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -133,7 +133,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.8156863}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -298,27 +298,27 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tea_e: 0
   tea_Fill: 0
-  fill0: {fileID: 10911, guid: 0000000000000000f000000000000000, type: 0}
-  fill1: {fileID: 0}
-  fill2: {fileID: 0}
-  fill3: {fileID: 0}
-  fill4: {fileID: 0}
+  fill0: {fileID: 21300000, guid: 580948d6c4477e44a835cdb9d3da8a46, type: 3}
+  fill1: {fileID: 21300000, guid: 580948d6c4477e44a835cdb9d3da8a46, type: 3}
+  fill2: {fileID: 21300000, guid: 580948d6c4477e44a835cdb9d3da8a46, type: 3}
+  fill3: {fileID: 21300000, guid: 580948d6c4477e44a835cdb9d3da8a46, type: 3}
+  fill4: {fileID: 21300000, guid: 580948d6c4477e44a835cdb9d3da8a46, type: 3}
   TeaHolder: {fileID: 1066348642338547939}
   syrup_e: 0
   syrup_Fill: 0
-  Sfill0: {fileID: 21300000, guid: 73190e7c063940344a62a680d7eb518c, type: 3}
-  Sfill1: {fileID: 0}
-  Sfill2: {fileID: 0}
-  Sfill3: {fileID: 0}
-  Sfill4: {fileID: 0}
+  Sfill0: {fileID: 21300000, guid: 58955db51e14f9f40938ed002ff1888f, type: 3}
+  Sfill1: {fileID: 21300000, guid: 58955db51e14f9f40938ed002ff1888f, type: 3}
+  Sfill2: {fileID: 21300000, guid: 58955db51e14f9f40938ed002ff1888f, type: 3}
+  Sfill3: {fileID: 21300000, guid: 58955db51e14f9f40938ed002ff1888f, type: 3}
+  Sfill4: {fileID: 21300000, guid: 58955db51e14f9f40938ed002ff1888f, type: 3}
   SyrupHolder: {fileID: 7465719711416676291}
   bubble_e: 0
   bubble_Fill: 0
-  Bfill0: {fileID: 21300000, guid: e2ba7afccda3bd3419292dfff9795663, type: 3}
-  Bfill1: {fileID: 0}
-  Bfill2: {fileID: 0}
-  Bfill3: {fileID: 0}
-  Bfill4: {fileID: 0}
+  Bfill0: {fileID: 21300000, guid: 6ac47454c973c2743bf0b721e31bb231, type: 3}
+  Bfill1: {fileID: 21300000, guid: 6ac47454c973c2743bf0b721e31bb231, type: 3}
+  Bfill2: {fileID: 21300000, guid: 6ac47454c973c2743bf0b721e31bb231, type: 3}
+  Bfill3: {fileID: 21300000, guid: 6ac47454c973c2743bf0b721e31bb231, type: 3}
+  Bfill4: {fileID: 21300000, guid: 6ac47454c973c2743bf0b721e31bb231, type: 3}
   BubbleHolder: {fileID: 8404589316168952677}
   isCupThrow: 0
   DeleteTimer: 1
@@ -455,7 +455,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.8156863}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
