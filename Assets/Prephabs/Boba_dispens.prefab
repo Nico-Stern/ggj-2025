@@ -181,6 +181,11 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 53eb4f3130919b047b6cc8a3b1663bfb, type: 3}
   - {fileID: 21300000, guid: 7b46cf3aeaa26df4ea6dd4f732ba6f6e, type: 3}
   - {fileID: 21300000, guid: 6fb063241a9d354469df4f54165afff2, type: 3}
+  Bubble_M:
+  - {fileID: 2100000, guid: c632702204283fc44bc4098d9f474dd1, type: 2}
+  - {fileID: 2100000, guid: e91d4cc02da00f245bcf016b2d27ab70, type: 2}
+  - {fileID: 2100000, guid: 5cfecd89f55b25547b0d35b4880a2b5d, type: 2}
+  - {fileID: 2100000, guid: 214f6fdb274cf024b80079e0bfea6948, type: 2}
   sr: {fileID: 5085996468615002088}
 --- !u!1 &8028761087883532886
 GameObject:
