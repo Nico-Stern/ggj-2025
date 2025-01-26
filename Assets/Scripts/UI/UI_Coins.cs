@@ -9,14 +9,14 @@ public class UI_Coins : MonoBehaviour
     public TMP_Text CoinsText;
 
     [SerializeField] Color[] ColorOfSprite;
-    [SerializeField] Image[] Orders;
+    [SerializeField] public Image[] Orders;
 
     // Start is called before the first frame update
     void Awake()
     {
         for (int i = 0; i < Orders.Length; i++)
         {
-            Orders[i].enabled=false;
+            OrderFinished(i);
         }
     }
 
@@ -49,6 +49,9 @@ public class UI_Coins : MonoBehaviour
 
     public void OrderFinished(int Index)
     {
+        Orders[Index].transform.GetChild(2).GetComponent<Image>().color = new Color(0, 0, 0, 0);
+        Orders[Index].transform.GetChild(1).GetComponent<Image>().color = new Color(0, 0, 0, 0);
+        Orders[Index].transform.GetChild(0).GetComponent<Image>().color = new Color(0, 0, 0, 0);
         Orders[Index].enabled=false;    
     }
 }

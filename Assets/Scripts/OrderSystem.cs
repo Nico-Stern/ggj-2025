@@ -14,6 +14,7 @@ public class Order
     [SerializeField] public Bubble bubble;
     [SerializeField] public float Time;
     [SerializeField] public int Price;
+    [SerializeField] public int OrderShield;
 }
 
 public class OrderSystem : MonoBehaviour
@@ -24,6 +25,8 @@ public class OrderSystem : MonoBehaviour
     [SerializeField] int Max_Orders=3;
     [SerializeField] float NextOrderInSec = 2f;
     float CurrentOrderTimer;
+
+    [SerializeField] float DrinkTimer = 30f;
 
     [SerializeField] int CurrentCoins = 0;
 
@@ -44,6 +47,21 @@ public class OrderSystem : MonoBehaviour
             CurrentOrderTimer = 0;
             newOrder();
         }
+
+        for(int i=0; i<orders.Count; i++)
+        {
+            orders[i].Time -= Time.deltaTime;
+            if (orders[i].Time <= 0)
+            {
+                if (CurrentCoins>=2)
+                {
+                    CurrentCoins -= 2;
+                }
+
+                UI.OrderFinished(orders[i].OrderShield);
+                orders.RemoveAt(i);
+            }
+        }
     }
 
     public void newOrder()
@@ -58,6 +76,8 @@ public class OrderSystem : MonoBehaviour
             int rdm_Bubble = UnityEngine.Random.Range(1, System.Enum.GetValues(typeof(Bubble)).Length); 
             int rdm_Coins = UnityEngine.Random.Range(1, 6); 
 
+
+
             // Enum-Zuweisung basierend auf dem Index
             Index_Order.tea = (Tea)rdm_Tea;
             Index_Order.syrup = (Syrup)rdm_Syrup;
@@ -65,10 +85,23 @@ public class OrderSystem : MonoBehaviour
 
             Index_Order.Price = rdm_Coins;
 
+            Index_Order.Time = DrinkTimer;
+
+            for (int i = 0; i < UI.Orders.Length; i++)
+            {
+                if (!UI.Orders[i].IsActive())
+                {
+                    Index_Order.OrderShield = i;
+                    break;
+                }
+            }
+
             // Füge den neuen Auftrag der Liste hinzu
             orders.Add(Index_Order);
 
             UI.SetOrderUI(orders.Count-1, rdm_Tea, rdm_Syrup, rdm_Bubble);
+
+            
         }
 
     }
