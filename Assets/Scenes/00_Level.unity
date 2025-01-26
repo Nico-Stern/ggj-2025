@@ -403,7 +403,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b8cf208f494b3ab47837bb9e0035731a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneName: Frank
 --- !u!114 &143760688
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1110,7 +1109,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b8cf208f494b3ab47837bb9e0035731a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneName: 
 --- !u!114 &792022924
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3197,11 +3195,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1481118874521536812, guid: aaa248d89c7849848b3439d45c33707c, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 4.71
+      value: 4.48
       objectReference: {fileID: 0}
     - target: {fileID: 1481118874521536812, guid: aaa248d89c7849848b3439d45c33707c, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -2.94
+      value: -5.22
       objectReference: {fileID: 0}
     - target: {fileID: 1481118874521536812, guid: aaa248d89c7849848b3439d45c33707c, type: 3}
       propertyPath: m_LocalRotation.w
@@ -3245,7 +3243,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7441006808946240109, guid: aaa248d89c7849848b3439d45c33707c, type: 3}
       propertyPath: smoothSpeed
-      value: 0.01
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8064182567088870645, guid: aaa248d89c7849848b3439d45c33707c, type: 3}
       propertyPath: m_Name
