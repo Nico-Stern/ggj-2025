@@ -63,6 +63,21 @@ public class UI_Coins : MonoBehaviour
         Orders[OrderShield].transform.GetChild(2).GetComponent<Image>().sprite = teaS[tea_index - 1];
         Orders[OrderShield].transform.GetChild(1).GetComponent<Image>().sprite = SyrupS[Syrup_Index - 1];
         Orders[OrderShield].transform.GetChild(0).GetComponent<Image>().sprite = BobaS[Bubble_Index - 1];
+
+
+        if (Bubble_Index ==3)
+        {
+            RectTransform rectTransform = Orders[OrderShield].transform.GetChild(0).GetComponent<RectTransform>();
+            rectTransform.SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal, 255);
+            rectTransform.SetSizeWithCurrentAnchors(RectTransform.Axis.Vertical, 255);
+
+        }
+        else
+        {
+            RectTransform rectTransform = Orders[OrderShield].transform.GetChild(0).GetComponent<RectTransform>();
+            rectTransform.SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal, 500);
+            rectTransform.SetSizeWithCurrentAnchors(RectTransform.Axis.Vertical, 500);
+        }
         Orders[OrderShield].gameObject.active = true;
 
        
