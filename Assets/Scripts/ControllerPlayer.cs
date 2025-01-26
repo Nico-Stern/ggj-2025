@@ -4,33 +4,72 @@ using UnityEngine;
 
 public class ControllerPlayer : MonoBehaviour
 {
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
     public float moveSpeed = 100; // Bewegungsgeschwindigkeit // Sprungkraft
+=======
+=======
+>>>>>>> Stashed changes
+    Animator animator;
+
+    public float moveSpeed = 5f; // Bewegungsgeschwindigkeit // Sprungkraft
+>>>>>>> Stashed changes
 
     private Rigidbody rb;
     private bool isGrounded;
     private float groundCheckRadius = 0.2f;
     public LayerMask groundLayer; // Schicht für den Boden
 
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
     Animator animator;
 
     [SerializeField] float delay = .3f;
     [SerializeField] float currentDelay;
 
     bool IsTimerRunnig;
+=======
+=======
+>>>>>>> Stashed changes
+    bool hasCup;
+
+    public void PlayerHasCup(bool hascup)
+    {
+        hasCup = hascup;
+        animator.SetBool("CupGrabbed", hascup);
+    }
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
+>>>>>>> Stashed changes
 
     void Start()
     {
         rb = GetComponent<Rigidbody>();
         animator = GetComponent<Animator>();
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
     }
 
     public void HasPlayerTheCup(bool hasCup)
     {
         animator.SetBool("CupGrabbed", hasCup);
+=======
+>>>>>>> Stashed changes
+=======
+>>>>>>> Stashed changes
     }
 
     void Update()
     {
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
+=======
+        
+>>>>>>> Stashed changes
+=======
+        
+>>>>>>> Stashed changes
 
         Move();
 
@@ -65,6 +104,7 @@ public class ControllerPlayer : MonoBehaviour
 
                 Index.transform.SetParent(null);
 
+<<<<<<< Updated upstream
                 Index.GetComponent<Rigidbody>().AddForce(100, 300, 10);
 
                 animator.SetTrigger("CupThrow");
@@ -79,6 +119,14 @@ public class ControllerPlayer : MonoBehaviour
 
                 HasPlayerTheCup(false);
                 IsTimerRunnig = false;
+=======
+                Index.GetComponent<Rigidbody>().AddForce(100,300,10);
+
+                PlayerHasCup(false);
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
+>>>>>>> Stashed changes
             }
         }
         //maschine betätigen maybe?
@@ -101,11 +149,20 @@ public class ControllerPlayer : MonoBehaviour
         }
 
         // Bewege den Spieler
+<<<<<<< Updated upstream
         rb.velocity = moveDirection * moveSpeed;
 
         animator.SetFloat("Velocity", rb.velocity.x);
 
         print(rb.velocity.x);
+=======
+        rb.velocity = new Vector3(moveDirection.x * moveSpeed, rb.velocity.y, moveDirection.z * moveSpeed);
+
+        animator.SetFloat("Velocity", rb.velocity.x);
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
+>>>>>>> Stashed changes
     }
 
 }
