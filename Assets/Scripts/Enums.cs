@@ -15,8 +15,6 @@ public enum Syrup
 {
     none,
     Chocolate,
-    Mango,
-    Lychee,
     Brown_Sugar
 }
 

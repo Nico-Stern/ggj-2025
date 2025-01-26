@@ -71,12 +71,16 @@ public class ControllerPlayer : MonoBehaviour
         {
             if (transform.childCount != 0)
             {
-                GameObject Index = transform.GetComponentInChildren<Cup_Info>().gameObject;
+                RectTransform Index = transform.GetComponentInChildren<RectTransform>();
 
                 Index.GetComponent<Rigidbody>().isKinematic = false;
 
                 Index.transform.SetParent(null);
 
+                //offset 
+                //Index.transform.position = new Vector3(transform.position.x,transform.position.y+Index.transform.position.y,transform.position.z);
+
+                Index.localPosition = new Vector3(transform.position.x, 4, transform.position.z);
 
                 Index.GetComponent<Rigidbody>().AddForce(rb.velocity*120f+ new Vector3( 0, 300, 0));
 

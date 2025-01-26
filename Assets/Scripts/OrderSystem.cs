@@ -100,9 +100,9 @@ public class OrderSystem : MonoBehaviour
 
             for (int i = 0; i < 3; i++)
             {
-                if (!UI.Orders[i].IsActive())
+                if (orders[i].OrderShield==0 || orders[i].OrderShield == 1 || orders[i].OrderShield == 2)
                 {
-                    Index_Order.OrderShield = i;
+                    indexes.Remove(i);
                     
                     break;
                 }
@@ -113,7 +113,7 @@ public class OrderSystem : MonoBehaviour
             // Füge den neuen Auftrag der Liste hinzu
             orders.Add(Index_Order);
 
-            UI.SetOrderUI(orders.Count-1, rdm_Tea, rdm_Syrup, rdm_Bubble, Index_Order.OrderShield);
+            UI.SetOrderUI(orders.Count-1, rdm_Tea, rdm_Syrup, rdm_Bubble, indexes[0]);
 
             print(Index_Order.OrderShield);
             UI.SetCoinsUI(Index_Order.OrderShield, Index_Order.Price);

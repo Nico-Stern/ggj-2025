@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -5,13 +6,13 @@ using UnityEngine;
 public class Cup_Holder : MonoBehaviour
 {
 
-    GameObject Player;
+    ControllerPlayer Player;
     [SerializeField] GameObject Cup;
 
     // Start is called before the first frame update
     void Start()
     {
-        Player = FindObjectOfType<ControllerPlayer>().gameObject;
+        Player = FindObjectOfType<ControllerPlayer>();
     }
 
     // Update is called once per frame
@@ -27,8 +28,8 @@ public class Cup_Holder : MonoBehaviour
             // Erstelle eine Instanz des Cups über dem Spieler
             GameObject IndexCup = Instantiate(
                 Cup,
-                Player.transform.position + new Vector3(0, 22, 0), // Position: etwas über dem Spieler
-                Quaternion.Euler(90, 0, 180) // Rotation: korrekt ausgerichtet
+                Player.transform.position , // Position: etwas über dem Spieler
+                Quaternion.identity // Rotation: korrekt ausgerichtet
             );
 
             // Setze den Spieler als Elternobjekt des Cups
@@ -36,7 +37,11 @@ public class Cup_Holder : MonoBehaviour
             
 
             // Passe die lokale Position des Cups an, damit er immer über dem Spieler bleibt
-            IndexCup.transform.localPosition = new Vector3(0, 8, 0); // 2 Einheiten über dem Spieler
+            IndexCup.transform.localPosition = new Vector3(1.3f, 9.5f, 0); // 2 Einheiten über dem Spieler
+
+            IndexCup.transform.localScale = Vector3.one;
+
+            Player.PlayerHasCup(true);
         }
     }
 
