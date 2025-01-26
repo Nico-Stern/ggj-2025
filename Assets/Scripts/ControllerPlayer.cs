@@ -10,15 +10,12 @@ public class ControllerPlayer : MonoBehaviour
     [SerializeField] Animator animator;
 
     private Rigidbody rb;
-    private bool isGrounded;
-    private float groundCheckRadius = 0.2f;
     public LayerMask groundLayer; // Schicht für den Boden
 
 
     [SerializeField] float delay = .3f;
     [SerializeField] float currentDelay;
 
-    bool IsTimerRunnig;
 
     bool hasCup;
 

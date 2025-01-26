@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Security.Cryptography;
+using TMPro;
 using UnityEngine;
 
 [Serializable]
@@ -21,7 +22,11 @@ public class OrderSystem : MonoBehaviour
 {
     [Header("Timer")]
 
-    [SerializeField] float GameTimer;
+    [SerializeField] float GameTimer=5;
+    [SerializeField] GameObject WinScreen;
+    [SerializeField] TMP_Text CoinsWin;
+    [SerializeField] TMP_Text TimerText;
+
 
     [Header("Rest")]
     public UI_Coins UI;
@@ -38,7 +43,7 @@ public class OrderSystem : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        WinScreen.SetActive(false);
         UI = GetComponent<UI_Coins>();
         UI.Set_TbxCoins(CurrentCoins);
     }
@@ -46,6 +51,28 @@ public class OrderSystem : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        GameTimer -= Time.deltaTime;
+
+        {
+            if (GameTimer > 0)
+            {
+                GameTimer -= Time.deltaTime;
+            }
+
+            int minutes = Mathf.FloorToInt(GameTimer / 60);
+            int seconds = Mathf.FloorToInt(GameTimer % 60);
+            TimerText.text = string.Format("{0:00}:{1:00}", minutes, seconds);
+        }
+
+
+        if(GameTimer < 0)
+        {
+            FindObjectOfType<Pause>().PausedGame(true);
+            WinScreen.SetActive(true);
+            CoinsWin.text = CurrentCoins.ToString();
+            TimerText.enabled=false;
+        }
+
         CurrentOrderTimer += Time.deltaTime;
         if(CurrentOrderTimer >= NextOrderInSec)
         {
