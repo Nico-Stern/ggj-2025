@@ -19,6 +19,8 @@ public class Machine : MonoBehaviour
     [SerializeField] Sprite []Tea_Sprite;
     [SerializeField] Sprite []Syrup_Sprite;
     [SerializeField] Sprite []Bubble_Sprite;
+    [SerializeField] Material []Bubble_M;
+
 
     
 
@@ -62,6 +64,11 @@ public class Machine : MonoBehaviour
 
 
                 sr.sprite = Bubble_Sprite[((int)bubble)-1];
+
+                if (CompareTag("boba"))
+                {
+                    transform.GetChild(0).GetComponent<Renderer>().material = Bubble_M[((int)bubble) - 1];
+                }
                 break;
         }
     }
