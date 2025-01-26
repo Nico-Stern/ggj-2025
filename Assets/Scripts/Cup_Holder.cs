@@ -22,7 +22,7 @@ public class Cup_Holder : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag("Player"))
+        if (other.gameObject.CompareTag("Player")&&other.gameObject.transform.childCount<2)
         {
             // Erstelle eine Instanz des Cups über dem Spieler
             GameObject IndexCup = Instantiate(
@@ -33,6 +33,7 @@ public class Cup_Holder : MonoBehaviour
 
             // Setze den Spieler als Elternobjekt des Cups
             IndexCup.transform.SetParent(Player.transform);
+            
 
             // Passe die lokale Position des Cups an, damit er immer über dem Spieler bleibt
             IndexCup.transform.localPosition = new Vector3(0, 8, 0); // 2 Einheiten über dem Spieler

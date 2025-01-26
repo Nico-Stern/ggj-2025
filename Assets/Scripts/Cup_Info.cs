@@ -34,6 +34,9 @@ public class Cup_Info : MonoBehaviour
     [SerializeField] Material Bfill4;
     [SerializeField] GameObject BubbleHolder;
 
+    public bool isCupThrow;
+    [SerializeField] float DeleteTimer = 1f;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -43,7 +46,20 @@ public class Cup_Info : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if(isCupThrow)
+        {
+            DeleteTimer-=Time.deltaTime;
+        }
+
+        if(DeleteTimer< 0f)
+        {
+            Destroy(this); return;
+        }
+    }
+
+    public void Set_CupThrown(bool isthrown)
+    {
+        isCupThrow = isthrown;
     }
 
     private void OnCollisionEnter(Collision collision)
