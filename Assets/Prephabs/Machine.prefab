@@ -322,14 +322,19 @@ MonoBehaviour:
   syrup: 0
   bubble: 0
   FillSpeed: 20
-  Tea_Sprite: {fileID: 21300000, guid: c60ef66f9d240f043b58525fafa85bb2, type: 3}
-  Syrup_Sprite: {fileID: 21300000, guid: 3bae452ba16ceaa40ac95ce52c60521b, type: 3}
-  Bubble_Sprite: {fileID: 21300000, guid: 649a0c3c8b62a994f890ee7507ec95a9, type: 3}
-  ColorOfImage:
-  - {r: 0.9150943, g: 0.34100214, b: 0.34100214, a: 1}
-  - {r: 0.5113232, g: 0.376602, b: 0.8773585, a: 1}
-  - {r: 0.8584906, g: 0.8405967, b: 0.44139376, a: 1}
-  - {r: 0.41006586, g: 0.8962264, b: 0.44939995, a: 1}
+  Tea_Sprite:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  Syrup_Sprite:
+  - {fileID: 0}
+  - {fileID: 0}
+  Bubble_Sprite:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   sr: {fileID: 4644197268537274471}
 --- !u!1 &3096389433408219797
 GameObject:

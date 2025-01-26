@@ -16,11 +16,11 @@ public class Machine : MonoBehaviour
     [SerializeField] float FillSpeed = 5f;
     bool isfilling;
 
-    [SerializeField] Sprite Tea_Sprite;
-    [SerializeField] Sprite Syrup_Sprite;
-    [SerializeField] Sprite Bubble_Sprite;
+    [SerializeField] Sprite []Tea_Sprite;
+    [SerializeField] Sprite []Syrup_Sprite;
+    [SerializeField] Sprite []Bubble_Sprite;
 
-    [SerializeField] Color[] ColorOfImage;
+    
 
     [SerializeField] SpriteRenderer sr;
 
@@ -43,25 +43,25 @@ public class Machine : MonoBehaviour
             case Machine_Enum.Tea:
                 syrup = Syrup.none;
                 bubble = Bubble.none;
-                sr.sprite = Tea_Sprite;
+                
 
-                sr.color=ColorOfImage[((int)tea)-1] ;
+                sr.sprite = Tea_Sprite[((int)tea)-1] ;
                 break;
 
             case Machine_Enum.Syrup:
                 tea = Tea.none;
                 bubble = Bubble.none;
-                sr.sprite = Syrup_Sprite;
+                
 
-                sr.color = ColorOfImage[((int)syrup)-1];//
+                sr.sprite = Syrup_Sprite[((int)syrup)-1];//
                 break;
 
             case Machine_Enum.Bubble:
                 syrup = Syrup.none;
                 tea = Tea.none;
-                sr.sprite = Bubble_Sprite;
 
-                sr.color = ColorOfImage[((int)bubble)-1];
+
+                sr.sprite = Bubble_Sprite[((int)bubble)-1];
                 break;
         }
     }

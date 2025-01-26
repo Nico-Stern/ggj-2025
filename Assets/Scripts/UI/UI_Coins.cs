@@ -8,7 +8,10 @@ public class UI_Coins : MonoBehaviour
 {
     public TMP_Text CoinsText;
 
-    [SerializeField] Color[] ColorOfSprite;
+    [SerializeField] Sprite[] teaS;
+    [SerializeField] Sprite[] SyrupS;
+    [SerializeField] Sprite[] BobaS;
+
     [SerializeField] public Image[] Orders;
     [SerializeField] List<Slider> SliderList = new List<Slider>();
 
@@ -57,9 +60,9 @@ public class UI_Coins : MonoBehaviour
     public void SetOrderUI(int Index, int tea_index, int Syrup_Index, int Bubble_Index, int OrderShield)
     {
 
-        Orders[OrderShield].transform.GetChild(2).GetComponent<Image>().color = ColorOfSprite[tea_index - 1];
-        Orders[OrderShield].transform.GetChild(1).GetComponent<Image>().color = ColorOfSprite[Syrup_Index - 1];
-        Orders[OrderShield].transform.GetChild(0).GetComponent<Image>().color = ColorOfSprite[Bubble_Index - 1];
+        Orders[OrderShield].transform.GetChild(2).GetComponent<Image>().sprite = teaS[tea_index - 1];
+        Orders[OrderShield].transform.GetChild(1).GetComponent<Image>().sprite = SyrupS[Syrup_Index - 1];
+        Orders[OrderShield].transform.GetChild(0).GetComponent<Image>().sprite = BobaS[Bubble_Index - 1];
         Orders[OrderShield].gameObject.active = true;
 
        
