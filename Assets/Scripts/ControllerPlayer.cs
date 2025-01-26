@@ -4,33 +4,47 @@ using UnityEngine;
 
 public class ControllerPlayer : MonoBehaviour
 {
+
     public float moveSpeed = 100; // Bewegungsgeschwindigkeit // Sprungkraft
+
+    [SerializeField] Animator animator;
 
     private Rigidbody rb;
     private bool isGrounded;
     private float groundCheckRadius = 0.2f;
     public LayerMask groundLayer; // Schicht für den Boden
 
-    Animator animator;
 
     [SerializeField] float delay = .3f;
     [SerializeField] float currentDelay;
 
     bool IsTimerRunnig;
 
+    bool hasCup;
+
+    public void PlayerHasCup(bool hascup)
+    {
+        hasCup = hascup;
+        animator.SetBool("CupGrabbed", hascup);
+    }
+
+
     void Start()
     {
         rb = GetComponent<Rigidbody>();
         animator = GetComponent<Animator>();
+
     }
 
     public void HasPlayerTheCup(bool hasCup)
     {
         animator.SetBool("CupGrabbed", hasCup);
+
     }
 
     void Update()
     {
+
 
         Move();
 
@@ -52,34 +66,27 @@ public class ControllerPlayer : MonoBehaviour
 
         animator.SetFloat("Velocity", rb.velocity.x);
 
-        print(moveSpeed);
-
         //weg werfen
         if (Input.GetKeyDown(KeyCode.E))
         {
             if (transform.childCount != 0)
             {
-                GameObject Index = transform.GetChild(0).gameObject;
+                GameObject Index = transform.GetComponentInChildren<Cup_Info>().gameObject;
 
                 Index.GetComponent<Rigidbody>().isKinematic = false;
 
                 Index.transform.SetParent(null);
 
-                Index.GetComponent<Rigidbody>().AddForce(100, 300, 10);
 
-                animator.SetTrigger("CupThrow");
-                currentDelay = 0;
-                IsTimerRunnig = true;
+                Index.GetComponent<Rigidbody>().AddForce(rb.velocity*120f+ new Vector3( 0, 300, 0));
+
+
+                PlayerHasCup(false);
             }
         }
         else
         {
-            if (currentDelay > delay && IsTimerRunnig)
-            {
-
-                HasPlayerTheCup(false);
-                IsTimerRunnig = false;
-            }
+           
         }
         //maschine betätigen maybe?
         currentDelay += Time.deltaTime;
@@ -101,11 +108,12 @@ public class ControllerPlayer : MonoBehaviour
         }
 
         // Bewege den Spieler
+
         rb.velocity = moveDirection * moveSpeed;
 
         animator.SetFloat("Velocity", rb.velocity.x);
 
-        print(rb.velocity.x);
+
     }
 
 }

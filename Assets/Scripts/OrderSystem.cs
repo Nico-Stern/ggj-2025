@@ -55,12 +55,18 @@ public class OrderSystem : MonoBehaviour
             {
                 if (CurrentCoins>=2)
                 {
-                    CurrentCoins -= 2;
+                    //CurrentCoins -= 2;
                 }
 
                 UI.OrderFinished(orders[i].OrderShield);
                 orders.RemoveAt(i);
             }
+        }
+
+        for(int i=0;i<3; i++)
+        {
+            UI.UpdateSlider(orders[i].OrderShield, DrinkTimer, orders[i].Time);
+
         }
     }
 
@@ -87,21 +93,34 @@ public class OrderSystem : MonoBehaviour
 
             Index_Order.Time = DrinkTimer;
 
-            for (int i = 0; i < UI.Orders.Length; i++)
+            List<int> indexes = new List<int>();
+            indexes.Add(0);
+            indexes.Add(1);
+            indexes.Add(2);
+
+            for (int i = 0; i < 3; i++)
             {
                 if (!UI.Orders[i].IsActive())
                 {
                     Index_Order.OrderShield = i;
+                    
                     break;
                 }
             }
 
+            
+
             // Füge den neuen Auftrag der Liste hinzu
             orders.Add(Index_Order);
 
-            UI.SetOrderUI(orders.Count-1, rdm_Tea, rdm_Syrup, rdm_Bubble);
+            UI.SetOrderUI(orders.Count-1, rdm_Tea, rdm_Syrup, rdm_Bubble, Index_Order.OrderShield);
 
-            
+            print(Index_Order.OrderShield);
+            UI.SetCoinsUI(Index_Order.OrderShield, Index_Order.Price);
+
+
+
+
         }
 
     }
@@ -110,7 +129,7 @@ public class OrderSystem : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            Cup_Info Cup = other.gameObject.transform.GetChild(0).gameObject.GetComponent<Cup_Info>();
+            Cup_Info Cup = other.gameObject.transform.GetChild(1).gameObject.GetComponent<Cup_Info>();
 
             for (int i = 0; i < orders.Count; i++)
             {
